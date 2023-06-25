@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-)&aoi+_!rq-ek#^+fzao5(j67se+72kb(_(3gk@6erfm=h%x1m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['practicadiegovinals.azurewebsites.net', 'https://practicadiegovinalsextra.azurewebsites.net'] 
+ALLOWED_HOSTS = ['https://practicadiegovinals.azurewebsites.net', 'https://practicadiegovinalsextra.azurewebsites.net'] 
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -119,6 +120,7 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
